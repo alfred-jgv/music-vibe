@@ -1,35 +1,26 @@
 # Vibe
 
-Mobile-first music discovery app. Users pick a vibe; the backend will later return randomized Spotify catalog tracks. 
+Mobile-first music discovery app. Users pick a vibe; the backend returns randomized Spotify catalog tracks.
 
-## Current status
+## Current Status
 
-Slice 1: Spring Boot serves the vibe catalog from config. No Spotify calls yet.
+**Slice 1 complete:** Spring Boot serves the vibe catalog and returns mock recommendations. No real Spotify calls yet.
+
+## Architecture
+
+React frontend → Spring Boot REST API → Spotify service/client layer → Spotify Web API
+
+The React frontend never communicates directly with Spotify.
+
+## Prerequisites
+
+- Java 26
+- Maven 3.9+
+- Node.js 20+
 
 ## Backend
-
-Requires Java 27 and Maven.
 
 ```bash
 cd backend
 mvn test
 mvn spring-boot:run
-```
-
-Then: `GET http://localhost:8080/api/vibes`
-
-Vibes live in `backend/src/main/resources/application.yml` under `vibe.catalog`.
-
-## Environment variables
-
-None required for this slice. Later (Spotify):
-
-- `SPOTIFY_CLIENT_ID`
-- `SPOTIFY_CLIENT_SECRET`
-- `SPOTIFY_MARKET` (ISO country code, e.g. `PH`)
-
-Never put Spotify secrets in frontend env files.
-
-## Frontend
-
-Not created yet. Planned: React + Vite + TypeScript + Tailwind.
