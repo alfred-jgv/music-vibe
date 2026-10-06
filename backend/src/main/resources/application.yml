@@ -1,34 +1,43 @@
+app:
+  cors:
+    allowed-origins: http://localhost:5173
+
 spring:
   application:
     name: vibe
+  profiles:
+    active: mock
 
-server:
-  port: 8080
-
-# Vibe catalog. Search criteria will be added when we wire Spotify Search.
 vibe:
   catalog:
     - id: late-night
       name: Late Night
-      emoji: "🌃"
+      genres: [r&b, indie, electronic, mellow]
     - id: road-trip
       name: Road Trip
-      emoji: "🚗"
+      genres: [rock, pop, alternative, upbeat]
     - id: party
       name: Party
-      emoji: "🎉"
+      genres: [dance, pop, electronic, energetic]
     - id: chill
       name: Chill
-      emoji: "☕"
+      genres: [acoustic, ambient, indie, mellow]
     - id: rainy-day
       name: Rainy Day
-      emoji: "🌧️"
+      genres: [acoustic, folk, mellow, ambient]
     - id: hype
       name: Hype
-      emoji: "🔥"
+      genres: [hip-hop, electronic, dance, energetic]
     - id: romantic
       name: Romantic
-      emoji: "❤️"
+      genres: [r&b, soul, pop, mellow]
     - id: feel-good
       name: Feel Good
-      emoji: "🌅"
+      genres: [pop, funk, indie, upbeat]
+
+recommendation:
+  tracks-per-genre: 10
+  max-results: 20
+
+server:
+  port: 8080

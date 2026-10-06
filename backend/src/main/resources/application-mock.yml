@@ -1,0 +1,3 @@
+# Mock profile: no Spotify credentials required.
+# MockSpotifyClient provides synthetic tracks; RealSpotifyClient and
+# SpotifyAuthService are not instantiated because they carry @Profile("spotify").

@@ -30,8 +30,8 @@ public class VibeCatalogProperties {
         @NotBlank
         private String name;
 
-        @NotBlank
-        private String emoji;
+        @NotEmpty
+        private List<String> genres = List.of();
 
         public String getId() {
             return id;
@@ -49,12 +49,12 @@ public class VibeCatalogProperties {
             this.name = name;
         }
 
-        public String getEmoji() {
-            return emoji;
+        public List<String> getGenres() {
+            return genres;
         }
 
-        public void setEmoji(String emoji) {
-            this.emoji = emoji;
+        public void setGenres(List<String> genres) {
+            this.genres = genres;
         }
     }
 }
