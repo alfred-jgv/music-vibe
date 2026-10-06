@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "vibe",
+      "type": "com.vibe.config.VibeCatalogProperties",
+      "sourceType": "com.vibe.config.VibeCatalogProperties",
+      "description": "Catalog of moods the API can recommend tracks for."
+    }
+  ],
+  "properties": [
+    {
+      "name": "vibe.catalog",
+      "type": "java.util.List<com.vibe.config.VibeCatalogProperties$VibeDefinition>",
+      "sourceType": "com.vibe.config.VibeCatalogProperties",
+      "description": "Available vibes (id, display name, emoji)."
+    }
+  ]
+}

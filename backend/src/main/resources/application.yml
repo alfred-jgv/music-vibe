@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: vibe
+
+server:
+  port: 8080
+
+# Vibe catalog. Search criteria will be added when we wire Spotify Search.
+vibe:
+  catalog:
+    - id: late-night
+      name: Late Night
+      emoji: "🌃"
+    - id: road-trip
+      name: Road Trip
+      emoji: "🚗"
+    - id: party
+      name: Party
+      emoji: "🎉"
+    - id: chill
+      name: Chill
+      emoji: "☕"
+    - id: rainy-day
+      name: Rainy Day
+      emoji: "🌧️"
+    - id: hype
+      name: Hype
+      emoji: "🔥"
+    - id: romantic
+      name: Romantic
+      emoji: "❤️"
+    - id: feel-good
+      name: Feel Good
+      emoji: "🌅"
