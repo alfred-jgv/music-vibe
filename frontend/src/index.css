@@ -1,19 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
-html,
-body,
-#root {
+html, body, #root {
   min-height: 100%;
 }
 
 body {
   margin: 0;
-  background: #0a0a0f;
-  color: #e5e5ea;
+  background: #fbf9f4;
+  color: #0d1117;
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in { animation: fadeIn 280ms ease-out both; }
+
+.card-stack {
+  position: relative;
+  touch-action: none;
+  user-select: none;
+}
+
+.swipe-card {
+  position: absolute;
+  inset: 0;
+  transition: transform 280ms cubic-bezier(0.34, 1.56, 0.64, 1),
+              opacity 280ms ease;
+  will-change: transform;
+}
+
+.swipe-card.dragging {
+  transition: none;
+  cursor: grabbing;
+}
+
+@keyframes vibe-pulse {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes vibe-refresh {
+  0%   { opacity: 0; transform: translateY(10px); filter: brightness(1.6) blur(1px); }
+  40%  { opacity: 0.7; filter: brightness(1.2); }
+  100% { opacity: 1; transform: none; filter: none; }
+}
+
+.vibe-refresh {
+  animation: vibe-refresh 600ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }

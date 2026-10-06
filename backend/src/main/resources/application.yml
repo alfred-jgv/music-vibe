@@ -1,6 +1,8 @@
 app:
   cors:
-    allowed-origins: https://music-vibe-cyan.vercel.app
+    allowed-origins:
+      - http://localhost:5173
+      - https://music-vibe-cyan.vercel.app
 
 spring:
   application:
