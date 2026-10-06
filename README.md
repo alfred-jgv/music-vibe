@@ -1,6 +1,6 @@
 # Vibe
 
-Mobile-first music discovery app. Users pick a vibe; the backend will later return randomized Spotify catalog tracks. 
+Mobile-first music discovery app. Users pick a vibe; the backend will later return randomized catalog tracks. 
 
 ## Current status
 
