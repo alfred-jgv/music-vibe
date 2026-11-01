@@ -7,6 +7,8 @@ The React frontend communicates with the Spring Boot backend. Spotify-specific
 integration stays on the backend, and the app does not replace Spotify's
 official playback experience.
 
+<img width="1915" height="937" alt="image" src="https://github.com/user-attachments/assets/b6681c6e-56e6-40f3-b1d9-daf54647604a" />
+
 ## Status
 
 The current slice includes:
